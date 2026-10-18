@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
             return;
         }
 
-        // Perform GET request
+
         loadAllReports();
     }
 
