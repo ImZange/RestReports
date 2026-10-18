@@ -11,16 +11,13 @@ import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 
-/**
- * Translates technical failures (HTTP codes, exceptions) into short, human-friendly
- * messages. Raw codes and stack traces go to Logcat, never to the user.
- */
+
 public final class ApiErrors {
 
     private ApiErrors() {
     }
 
-    /** Server answered, but with an error status (4xx / 5xx). */
+
     @NonNull
     public static String fromHttpCode(@NonNull Context c, int code) {
         if (code == 400) return c.getString(R.string.error_bad_request);
@@ -32,7 +29,6 @@ public final class ApiErrors {
         return c.getString(R.string.error_http_generic);
     }
 
-    /** The request never completed (no connection, timeout, bad JSON...). */
     @NonNull
     public static String fromThrowable(@NonNull Context c, @NonNull Throwable t) {
         if (t instanceof UnknownHostException || t instanceof ConnectException) {
