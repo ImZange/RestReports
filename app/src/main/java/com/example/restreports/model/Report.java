@@ -4,26 +4,18 @@ import androidx.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Data Transfer Object (POJO) that mirrors the JSON returned by the REST API.
- *
- * <p>Our backend (backend/db.json) exposes "reports" with the fields
- * {@code id, municipality, symptomSummary, riskLevel}. The {@code alternate} names
- * additionally let the same model read jsonplaceholder "posts" ({@code title, body,
- * userId}), which is handy for quick tests.</p>
- */
+
 public class Report {
 
     public static final String RISK_LOW = "Low";
     public static final String RISK_MEDIUM = "Medium";
     public static final String RISK_HIGH = "High";
 
-    // Integer (not int) so that a new report is sent WITHOUT an "id" field:
-    // Gson skips nulls, whereas a primitive int would be serialized as "id":0.
+
     @SerializedName("id")
     private Integer id;
 
-    // Only present in the demo API; used to derive a risk level for display.
+
     @SerializedName("userId")
     private Integer userId;
 
@@ -36,7 +28,7 @@ public class Report {
     @SerializedName("riskLevel")
     private String riskLevel;
 
-    // Constructor for creating new records (POST / PUT)
+
     public Report(String municipality, String symptomSummary, String riskLevel) {
         this.municipality = municipality;
         this.symptomSummary = symptomSummary;
