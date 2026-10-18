@@ -43,11 +43,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * Single screen that exercises the four REST verbs through Retrofit:
- * GET (list + by id), POST (create), PUT (edit) and DELETE.
- * Every request uses enqueue(), so the UI thread is never blocked.
- */
+
 public class MainActivity extends AppCompatActivity implements ReportAdapter.Listener {
 
     private static final String TAG = "RestReports";
@@ -62,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
     private TextInputEditText etSearch;
     private ExtendedFloatingActionButton fab;
 
-    // Number of requests in flight (drives the ProgressBar)
+
     private int pendingCalls = 0;
 
     @Override
@@ -105,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
         });
 
         if (!RetrofitClient.isConfigured()) {
-            // BASE_URL still has the placeholders: explain instead of failing with a confusing error
+
             updateList();
             showError(getString(R.string.error_not_configured), null);
             return;
@@ -115,9 +111,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
         loadAllReports();
     }
 
-    // ------------------------------------------------------------------ REQUESTS
 
-    /** GET /posts : all reports. */
     private void loadAllReports() {
         etSearch.setText("");
         tilSearch.setError(null);
@@ -132,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
         });
     }
 
-    /** GET /posts/{id} : a single report. */
+
     private void searchById() {
         String text = etSearch.getText() == null ? "" : etSearch.getText().toString().trim();
         if (text.isEmpty()) {
@@ -185,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
                 });
     }
 
-    /** PUT /posts/{id} : replace a report. */
+
     private void updateReport(final Report old, final Report data) {
         run(apiService.updateReport(old.getId(), data),
                 new UiCallback<Report>("PUT", () -> updateReport(old, data)) {
@@ -210,16 +204,13 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
                 });
     }
 
-    /** Shows the progress indicator and executes the call asynchronously on a background thread. */
+
     private <T> void run(Call<T> call, UiCallback<T> callback) {
         startLoading();
         call.enqueue(callback);
     }
 
-    /**
-     * Common callback: hides the progress indicator, logs the technical details to Logcat
-     * and shows a friendly message (with Retry) to the user. Subclasses only implement onSuccess.
-     */
+
     private abstract class UiCallback<T> implements Callback<T> {
         private final String tag;
         private final Runnable retry;
@@ -259,9 +250,7 @@ public class MainActivity extends AppCompatActivity implements ReportAdapter.Lis
         }
     }
 
-    // ------------------------------------------------------------------ DIALOGS
 
-    /** Dialog used both to create (existing == null) and to edit a report. */
     private void showReportDialog(@Nullable final Report existing) {
         View form = LayoutInflater.from(this).inflate(R.layout.dialog_report, null);
         final TextInputLayout tilMunicipality = form.findViewById(R.id.tilMunicipality);
