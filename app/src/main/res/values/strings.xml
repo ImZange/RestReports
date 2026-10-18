@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Health Reports</string>
+
+    <!-- Header -->
+    <string name="header_caption">RESTful services</string>
+    <string name="header_title">Monitoring reports</string>
+    <string name="header_subtitle">Live data through Retrofit 2</string>
+    <string name="cd_refresh">Refresh reports</string>
+
+    <!-- Search / list -->
+    <string name="search_hint">Find report by ID</string>
+    <string name="cd_search">Search by ID</string>
+    <string name="loading">Loading, please wait</string>
+    <string name="fab_new">New report</string>
+    <string name="empty_title">No reports to show</string>
+    <string name="empty_text">Check your connection and refresh, or create a new report.</string>
+    <string name="report_id">#%1$d</string>
+    <string name="risk_chip">%1$s risk</string>
+    <string name="cd_delete_report">Delete report %1$d</string>
+    <plurals name="report_count">
+        <item quantity="one">%d report</item>
+        <item quantity="other">%d reports</item>
+    </plurals>
+
+    <!-- Dialogs -->
+    <string name="dialog_new_title">New report</string>
+    <string name="dialog_edit_title">Edit report %1$d</string>
+    <string name="hint_municipality">Municipality</string>
+    <string name="hint_symptoms">Symptom summary</string>
+    <string name="hint_risk">Risk level</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_retry">Retry</string>
+    <string name="dialog_delete_title">Delete report</string>
+    <string name="dialog_delete_message">Delete report %1$d? This action cannot be undone.</string>
+
+    <!-- Validation -->
+    <string name="err_search_empty">Enter a report ID</string>
+    <string name="err_search_invalid">Enter a valid number</string>
+    <string name="err_municipality_required">Enter the municipality</string>
+    <string name="err_symptoms_required">Enter a symptom summary</string>
+
+    <!-- Success -->
+    <string name="msg_created">Report created with ID %1$d</string>
+    <string name="msg_updated">Report %1$d updated</string>
+    <string name="msg_deleted">Report %1$d deleted</string>
+
+    <!-- Network errors (friendly text, no raw codes) -->
+    <string name="error_no_connection">Cannot reach the server. Check your internet connection and try again.</string>
+    <string name="error_timeout">The server took too long to respond. Please try again.</string>
+    <string name="error_network">A network problem interrupted the request. Please try again.</string>
+    <string name="error_unexpected">Something unexpected happened while reading the server reply.</string>
+    <string name="error_bad_request">The server could not understand the request. Please check the data you entered.</string>
+    <string name="error_unauthorized">You do not have permission to do that.</string>
+    <string name="error_not_found">The requested item was not found on the server.</string>
+    <string name="error_report_not_found">No report with ID %1$d exists on the server.</string>
+    <string name="error_too_many">Too many requests. Please wait a moment and try again.</string>
+    <string name="error_server">The server is having problems right now. Please try again later.</string>
+    <string name="error_http_generic">The request could not be completed. Please try again.</string>
+
+    <string name="error_not_configured">Set your own BASE_URL in RetrofitClient.java (see README) before running the app.</string>
+</resources>

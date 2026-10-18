@@ -1,0 +1,16 @@
+{
+  "reports": [
+    { "id": 1,  "municipality": "Guadalajara",       "symptomSummary": "Cluster of fever, joint pain and skin rash in three neighbourhoods; dengue suspected.", "riskLevel": "High" },
+    { "id": 2,  "municipality": "Monterrey",         "symptomSummary": "Mild seasonal influenza cases in two primary schools; students sent home for five days.", "riskLevel": "Low" },
+    { "id": 3,  "municipality": "Puebla",            "symptomSummary": "Increase in acute diarrhoea after a water supply interruption; chlorine levels being checked.", "riskLevel": "Medium" },
+    { "id": 4,  "municipality": "Mérida",            "symptomSummary": "Heat-related illness among outdoor workers: dizziness, dehydration and muscle cramps.", "riskLevel": "Medium" },
+    { "id": 5,  "municipality": "Oaxaca de Juárez",  "symptomSummary": "Isolated cases of conjunctivitis in a boarding school; no complications reported.", "riskLevel": "Low" },
+    { "id": 6,  "municipality": "Tijuana",           "symptomSummary": "Respiratory infections with persistent cough reported in a shelter; samples sent to the lab.", "riskLevel": "High" },
+    { "id": 7,  "municipality": "Querétaro",         "symptomSummary": "Food poisoning after a community event; 14 people treated, all recovering well.", "riskLevel": "Medium" },
+    { "id": 8,  "municipality": "León",              "symptomSummary": "Allergic reactions linked to high pollen concentration; antihistamine demand increased.", "riskLevel": "Low" },
+    { "id": 9,  "municipality": "Veracruz",          "symptomSummary": "Rising number of mosquito-borne fever cases after heavy rains; fumigation scheduled.", "riskLevel": "High" },
+    { "id": 10, "municipality": "Morelia",           "symptomSummary": "Whooping cough suspected in two unvaccinated infants; contact tracing in progress.", "riskLevel": "High" },
+    { "id": 11, "municipality": "Toluca",            "symptomSummary": "Carbon monoxide exposure in two households during a cold spell; both families recovered.", "riskLevel": "Medium" },
+    { "id": 12, "municipality": "Chihuahua",         "symptomSummary": "Routine surveillance: no unusual symptoms detected this week.", "riskLevel": "Low" }
+  ]
+}

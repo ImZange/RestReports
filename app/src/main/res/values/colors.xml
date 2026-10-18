@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#4F46E5</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#E0E7FF</color>
+    <color name="on_primary_container">#1E1B4B</color>
+    <color name="background">#F4F5FB</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="on_surface">#1F2937</color>
+    <color name="on_surface_variant">#6B7280</color>
+    <color name="card_stroke">#E5E7EB</color>
+    <color name="gradient_start">#4F46E5</color>
+    <color name="gradient_end">#7C3AED</color>
+    <color name="danger">#DC2626</color>
+    <color name="success">#16A34A</color>
+    <color name="warning">#EA580C</color>
+    <color name="risk_low">#15803D</color>
+    <color name="risk_medium">#B45309</color>
+    <color name="risk_high">#B91C1C</color>
+    <color name="risk_unknown">#4B5563</color>
+</resources>
